@@ -1,7 +1,12 @@
-# womanWideTech
+# WomanWideTech
 
 ## Team 3 
 
-Lisa Mandemakers
-Laurens Mudde
-Joost Locher
+Lisa Mandemakers<br>
+Laurens Mudde<br>
+Joost Locher<br>
+
+### to-do list
+- [ ] API
+- [ ] Logo
+- [x] Name? 
