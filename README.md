@@ -7,6 +7,11 @@ Laurens Mudde<br>
 Joost Locher<br>
 
 ### to-do list
+- [x] Name? 
+- [x] Carousel
+- [x] Cards
+- [x] Codepens
 - [ ] API
 - [ ] Logo
-- [x] Name? 
+- [ ] Font / Title
+- [ ] Anchor
