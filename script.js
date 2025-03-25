@@ -1,5 +1,7 @@
 console.log("hallo");
 
+const fallbackWebsite = "https://youtu.be/dQw4w9WgXcQ";
+
 // De app/website waar ik data vandaan wil halen
 const baseURL = 'https://fdnd.directus.app/';
 
@@ -25,6 +27,73 @@ async /*9*/ function getData(URL) {
 	);
 }
 
-// getData(urlMe).then( data209 => {
+getData(urlAll).then( dataEverbody => {
+    console.log(dataEverbody);
+    let allPeople = dataEverbody.data;
+    // let secondSection = document.querySelector('section:nth-of-type(2)');
+    let thirdSection = document.querySelector('section:nth-of-type(3)');
 
-// });
+    allPeople.forEach( person => { 
+       let personName = person.name;
+      //  let personImgSrc = 'https://fdnd.directus.app/assets/' + person.image;
+      //  let personPeriod = person.period;
+      //  let personWebsite = person.website;
+       let personCodepen = person.codepen;
+       let personGithub = person.github;
+       let personCodepenShowcase = '/embed/' + person.codepen_demo;
+
+      //  if (personWebsite) {
+      //   // do nothing
+      //  } else {
+      //   personWebsite.style.display = 'none';
+      //   console.log("no website")
+      //  }
+        
+       if (personCodepen) {
+        // do nothing
+       } else {
+        personCodepen = '';
+        personCodepenShowcase = '';
+       }
+
+       if (personGithub) {
+        // do nothing
+       } else {
+        personGithub = '';
+       }
+
+       let codepenShowcaseArticle = (personCodepen ? `<article>
+        
+         <iframe height="200" width="200" scrolling="no" src="${personCodepen}${personCodepenShowcase}?default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe> 
+    <h3>${personName}</h3>
+   
+    </article>` : '');
+
+    // voeg de HTML toe aan de section vóór het einde
+    // secondSection.insertAdjacentHTML('beforeend', personHTML);
+    thirdSection.insertAdjacentHTML('beforeend', codepenShowcaseArticle);
+ }) 
+});
+
+
+const state = {
+  changed: null,
+  changing: null,
+  // queue: [],
+  // count: 0,
+}
+
+scroller.addEventListener('scrollsnapchange', event => {state.changed?.classList.remove('change')
+  event.snapTargetInline.classList.add('change')
+  state.changed = event.snapTargetInline
+  
+})
+
+scroller.addEventListener('scrollsnapchanging', event => {
+  // manage snapping state
+  state.changed?.classList.remove('change')
+  state.changing?.classList.remove('changing')
+  event.snapTargetInline.classList.add('changing')
+  state.changing = event.snapTargetInline
+
+})
