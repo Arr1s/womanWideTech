@@ -32,15 +32,17 @@ getData(urlAll).then( dataEverbody => {
     let allPeople = dataEverbody.data;
     // let secondSection = document.querySelector('section:nth-of-type(2)');
     let thirdSection = document.querySelector('section:nth-of-type(3)');
+    let carouselUl = document.querySelector('ul')
 
     allPeople.forEach( person => { 
        let personName = person.name;
-      //  let personImgSrc = 'https://fdnd.directus.app/assets/' + person.image;
+       let personImgSrc = 'https://fdnd.directus.app/assets/' + person.image;
       //  let personPeriod = person.period;
       //  let personWebsite = person.website;
        let personCodepen = person.codepen;
        let personGithub = person.github;
        let personCodepenShowcase = '/embed/' + person.codepen_demo;
+       let personID = person.id;
 
       //  if (personWebsite) {
       //   // do nothing
@@ -69,9 +71,12 @@ getData(urlAll).then( dataEverbody => {
    
     </article>` : '');
 
+        let fotoVrouwen = `<li class="circle" style="--i:${personID};"><img src="${personImgSrc}" alt="fotot van ${personName}"></li>`
+
     // voeg de HTML toe aan de section vóór het einde
     // secondSection.insertAdjacentHTML('beforeend', personHTML);
     thirdSection.insertAdjacentHTML('beforeend', codepenShowcaseArticle);
+    carouselUl.insertAdjacentHTML('beforeend', fotoVrouwen);
  }) 
 });
 
