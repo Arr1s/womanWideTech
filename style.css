@@ -1,0 +1,126 @@
+:root {
+  --clipPath: 45%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+/* .mySlide {
+    border-radius: 50%;
+}
+
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+  }
+  
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0,0,0,0.2);
+  }
+  
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  } */
+
+
+
+
+ img {
+    width: 10%;
+  }
+
+section:nth-of-type(3) {
+    width: 200px;
+    background-color: yellow;
+    display: grid;
+    grid-auto-flow: column;
+    max-inline-size: min(1280px, 100vw);
+    justify-self: center;
+  
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    
+      &::before, &::after {
+      content: "";
+      display: block;
+      inline-size: 50vw;
+    }
+    
+    > * {
+      inline-size: 200px;
+      scroll-snap-align: var(--_snap-align, center);
+      display: grid;
+      place-items: center;
+      
+      &.changing {
+        background: green;
+      }
+      
+      &.change {
+        color: blue;
+      }
+    }
+    iframe {
+      height: auto;
+      aspect-ratio: 1;
+      clip-path: circle(var(--clipPath));
+    }
+}
+
+/* @-webkit-keyframes slide {
+  20% {margin-left: 0px;}
+  30% {margin-left: -500px;}
+  50% {margin-left: -500px;}
+  60% {margin-left: -1000px;}
+  70% {margin-left: -1000px;}
+  80% {margin-left: -1500px;}
+  90% {margin-left: -1500px;}
+} */
