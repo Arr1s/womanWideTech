@@ -62,17 +62,6 @@ getData(urlAll).then( dataEverbody => {
         personGithub = '';
        }
 
-
-
-    //   let personHTML = `<article>
-    //   <h3>${personName}</h3>
-    //   <img src="${personImgSrc}" alt="${personName}">
-    //   <p>${personPeriod}</p>` + (personWebsite ? `<a href="${personWebsite}">website</a>` : '' ) +
-    //   (personGithub ? `<a href="${personGithub}">${personGithub}</a>` : '' )
-    //   + (personCodepen ? `<iframe height=${iframeHeight} style="width: 100%; clip-path: circle(${clipPath}%);" scrolling="no" src="${personCodepen}${personCodepenShowcase}?default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">` : '') +
-    // `</iframe>
-    // </article>`;
-
        let codepenShowcaseArticle = (personCodepen ? `<article>
         
          <iframe height="200" width="200" scrolling="no" src="${personCodepen}${personCodepenShowcase}?default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe> 
@@ -87,35 +76,6 @@ getData(urlAll).then( dataEverbody => {
 });
 
 
-
-
-
-
-// let slideIndex = 1;
-// showSlides(slideIndex);
-
-// // Next/previous controls
-// function plusSlides(n) {
-//   showSlides(slideIndex += n);
-// }
-
-// // Thumbnail image controls
-// function currentSlide(n) {
-//   showSlides(slideIndex = n);
-// }
-
-// function showSlides(n) {
-//   let i;
-//   let slides = document.getElementsByClassName("mySlides");
-//   if (n > slides.length) {slideIndex = 1}
-//   if (n < 1) {slideIndex = slides.length}
-//   for (i = 0; i < slides.length; i++) {
-//     slides[i].style.display = "none";
-//   }
-//   slides[slideIndex-1].style.display = "block";
-// }
-
-
 const state = {
   changed: null,
   changing: null,
@@ -127,13 +87,6 @@ scroller.addEventListener('scrollsnapchange', event => {state.changed?.classList
   event.snapTargetInline.classList.add('change')
   state.changed = event.snapTargetInline
   
-  // setTimeout(() => {
-  //   state.queue.push({
-  //     parent: snapchange,
-  //     child: message,
-  //   })
-  // }, 3000)
-  
 })
 
 scroller.addEventListener('scrollsnapchanging', event => {
@@ -142,27 +95,5 @@ scroller.addEventListener('scrollsnapchanging', event => {
   state.changing?.classList.remove('changing')
   event.snapTargetInline.classList.add('changing')
   state.changing = event.snapTargetInline
-  
-  // setTimeout(() => {
-  //   state.queue.push({
-  //     parent: snapchanging,
-  //     child: message,
-  //   })
-  // }, 3000)
 
 })
-
-// setInterval(() => {
-//   if (!state.queue.length) return
-  
-//   document?.startViewTransition 
-//     ? document.startViewTransition(() => {
-//         let node = state.queue.shift()
-//         node.parent.removeChild(node.child)
-//       })
-//     : snapchanging.removeChild(state.queue.shift())
-// }, 1000)
-
-// snapalign.oninput = event => {
-//   document.body.style.setProperty('--_snap-align', event.target.selectedOptions[0].innerText)
-// }
