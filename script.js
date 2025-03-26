@@ -66,23 +66,23 @@ getData(urlAll).then(data => {
         let workDisplay = personWork ? `<p>${personWork}</p>` : '';
 
         // sidecard HTML code
-        // let personHTML = 
-        // `<section class="sidecard">
-        //     <img src="${personImgSrc}" alt="">
-        //     ${workDisplay}
-        //     <h2>${personName}</h2>
-        //     <div class="tags-container">
-        //         <p>${personShortName}</p>
-        //         <p>${personPeriod}</p>
-        //         <p>${personCountry}</p>
-        //     </div>
-        //     <h3>Visit:</h3>
-        //     <div class="link-container">
-        //         ${githubLink}
-        //         ${codepenlink}
-        //         ${websitelink}
-        //     </div>
-        // </section>`;
+        let personHTML = 
+        `<section class="sidecard" id="sidecard-${personID}">
+            <img src="${personImgSrc}" alt="">
+            ${workDisplay}
+            <h2>${personName}</h2>
+            <div class="tags-container">
+                <p>${personShortName}</p>
+                <p>${personPeriod}</p>
+                <p>${personCountry}</p>
+            </div>
+            <h3>Visit:</h3>
+            <div class="link-container">
+                ${githubLink}
+                ${codepenlink}
+                ${websitelink}
+            </div>
+        </section>`;
 
         // codepen showcase HTML code
         let codepenShowcaseArticle = personCodepen 
@@ -95,11 +95,13 @@ getData(urlAll).then(data => {
         // Foto's voor de orbiting li's code
         let fotoVrouwen = 
         `<li class="circle" style="--i:${personID};" data-period="${personPeriod}">
-            <img src="${personImgSrc}" alt="foto van ${personName}">
+        <a href="#" data-id="${personID}">
+        <img src="${personImgSrc}" alt="foto van ${personName}" data-id="${personID}">
+          </a>
         </li>`;
 
         // Voeg de HTML toe aan...
-        // allSection.insertAdjacentHTML('beforeend', personHTML);
+        allSection.insertAdjacentHTML('beforeend', personHTML);
         thirdSection.insertAdjacentHTML('beforeend', codepenShowcaseArticle);
         carouselUl.insertAdjacentHTML('beforeend', fotoVrouwen);
     });
@@ -107,7 +109,32 @@ getData(urlAll).then(data => {
     // Roep filterData pas aan als data is geladen
     filterData();
 
-
+    
+    document.querySelectorAll(".sidecard").forEach(sidecard => {
+      sidecard.style.display = "none";
+  });
+  
+  // Selecteer alle links in de lijst
+  const links = document.querySelectorAll("ul li a");
+    links.forEach(link => {
+      link.addEventListener("click", function (event) {
+          event.preventDefault(); // Voorkom standaard a-actie
+  
+          const clickedId = this.dataset.id; // Haal ID op
+          console.log("Geklikt op ID:", clickedId);
+  
+          // Alle sidecards verbergen
+          document.querySelectorAll(".sidecard").forEach(sidecard => {
+              sidecard.style.display = "none";
+          });
+  
+          // Juiste sidecard tonen
+          const targetSidecard = document.getElementById(`sidecard-${clickedId}`);
+          if (targetSidecard) {
+              targetSidecard.style.display = "block"; // Zorg dat deze zichtbaar wordt
+          }
+      });
+  });
 
 });
 
