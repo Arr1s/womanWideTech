@@ -21,8 +21,79 @@ ul {
     padding-inline-start: 0;
 }
 
-/* section:nth-of-type(1) {
-    display: flex;
-    flex-wrap: wrap;
-} */
 
+
+/* tars */
+.stars {
+  z-index: -1;
+        height: 0.3em;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        background-color: rgb(63, 16, 16);
+        position: absolute;
+        top: 0;
+        margin-top: 2em;
+        transition: 0.1s ease-in-out;
+        box-shadow:
+        -5vw 35vh 0 0 #ffffff,
+        65vw 12vh 0 0 #ffffff,
+        85vw 72vh 0 0 #ffffff,
+        -30vw 50vh 0 0 #ffffff,
+        95vw 10vh 0 0 #ffffff,
+        20vw 60vh 0 0 #ffffff,
+        -80vw 30vh 0 0 #ffffff,
+        42vw 82vh 0 0 #ffffff,
+        -25vw 40vh 0 0 #ffffff,
+        70vw 90vh 0 0 #ffffff,
+        50vw 70vh 0 0 #ffffff,
+        -60vw 80vh 0 0 #ffffff,
+        15vw 95vh 0 0 #ffffff,
+        -55vw 30vh 0 0 #ffffff,
+        75vw 50vh 0 0 #ffffff,
+        -40vw 20vh 0 0 #ffffff,
+        30vw 85vh 0 0 #ffffff,
+        -70vw 60vh 0 0 #ffffff,
+        60vw 15vh 0 0 #ffffff,
+        5vw 25vh 0 0 #ffffff,
+        -10vw 90vh 0 0 #ffffff;
+
+        &::before {
+            content: "";
+            height: 0.2em;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            background-color: rgb(255, 255, 255);
+            position: absolute;
+            top: 0;
+            margin-top: 2em;
+            box-shadow:
+            -43vw 12vh 0 0 #ffffff,
+            27vw 28vh 0 0 #ffffff,
+            -55vw 25vh 0 0 #ffffff,
+            19vw 30vh 0 0 #ffffff,
+            -50vw 7vh 0 0 #ffffff,
+            9vw 22vh 0 0 #ffffff,
+            -32vw 28vh 0 0 #ffffff,
+            45vw 13vh 0 0 #ffffff,
+            -24vw 19vh 0 0 #ffffff,
+            11vw 9vh 0 0 #ffffff,
+            -18vw 31vh 0 0 #ffffff,
+            51vw 21vh 0 0 #ffffff,
+            -12vw 16vh 0 0 #ffffff,
+            58vw 33vh 0 0 #ffffff,
+            -38vw 23vh 0 0 #ffffff,
+            17vw 18vh 0 0 #ffffff,
+            -60vw 30vh 0 0 #ffffff,
+            25vw 27vh 0 0 #ffffff,
+            -44vw 5vh 0 0 #ffffff,
+            39vw 11vh 0 0 #ffffff,
+            -29vw 30vh 0 0 #ffffff,
+            50vw 16vh 0 0 #ffffff,
+            -47vw 19vh 0 0 #ffffff,
+            33vw 28vh 0 0 #ffffff,
+            -40vw 12vh 0 0 #ffffff,
+            53vw 26vh 0 0 #ffffff,
+            -15vw 18vh 0 0 #ffffff,
+            60vw 5vh 0 0 #ffffff;
+        }
+      }
