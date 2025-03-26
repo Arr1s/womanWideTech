@@ -3,7 +3,7 @@
   --size-item: clamp(1.75em, 5vw, 3em);
 
   /* Aantal items per cirkel (dynamisch in JS) */
-  --n: 1; /* Fallback-waarde als JS niet geladen is */
+  --n: 50; /* Fallback-waarde als JS niet geladen is */
 
   /* Radius voor de cirkel */
   --radius: calc(var(--size-item) * 3);

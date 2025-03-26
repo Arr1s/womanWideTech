@@ -26,6 +26,8 @@ async function getData(URL) {
         });
 }
 
+
+
 getData(urlAll).then(data => {
     // Check of data geldig is
     if (!data || !data.data) { 
@@ -33,7 +35,7 @@ getData(urlAll).then(data => {
         return;
     }
     
-    dataEverybody = data; // ✅ Data opslaan
+    dataEverybody = data; // Data opslaan
     console.log("Opgehaalde data:", dataEverybody);
     let allPeople = dataEverybody.data;
 
@@ -64,23 +66,23 @@ getData(urlAll).then(data => {
         let workDisplay = personWork ? `<p>${personWork}</p>` : '';
 
         // sidecard HTML code
-        let personHTML = 
-        `<section class="sidecard">
-            <img src="${personImgSrc}" alt="">
-            ${workDisplay}
-            <h2>${personName}</h2>
-            <div class="tags-container">
-                <p>${personShortName}</p>
-                <p>${personPeriod}</p>
-                <p>${personCountry}</p>
-            </div>
-            <h3>Visit:</h3>
-            <div class="link-container">
-                ${githubLink}
-                ${codepenlink}
-                ${websitelink}
-            </div>
-        </section>`;
+        // let personHTML = 
+        // `<section class="sidecard">
+        //     <img src="${personImgSrc}" alt="">
+        //     ${workDisplay}
+        //     <h2>${personName}</h2>
+        //     <div class="tags-container">
+        //         <p>${personShortName}</p>
+        //         <p>${personPeriod}</p>
+        //         <p>${personCountry}</p>
+        //     </div>
+        //     <h3>Visit:</h3>
+        //     <div class="link-container">
+        //         ${githubLink}
+        //         ${codepenlink}
+        //         ${websitelink}
+        //     </div>
+        // </section>`;
 
         // codepen showcase HTML code
         let codepenShowcaseArticle = personCodepen 
@@ -97,14 +99,18 @@ getData(urlAll).then(data => {
         </li>`;
 
         // Voeg de HTML toe aan...
-        allSection.insertAdjacentHTML('beforeend', personHTML);
+        // allSection.insertAdjacentHTML('beforeend', personHTML);
         thirdSection.insertAdjacentHTML('beforeend', codepenShowcaseArticle);
         carouselUl.insertAdjacentHTML('beforeend', fotoVrouwen);
     });
 
     // Roep filterData pas aan als data is geladen
     filterData();
+
+
+
 });
+
 
 
 // Scroll snap code
@@ -127,27 +133,12 @@ document.querySelector("#scroller").addEventListener('scrollsnapchanging', event
 });
 
 
-// Filter data function
-function filterData() {
-  const selectedPeriod = document.getElementById('periodSelect').value;
-  const allListItems = document.querySelectorAll('ul li.circle'); // Select all circles
 
-  allListItems.forEach(item => {
-      const itemPeriod = item.getAttribute('data-period'); // Get period from attribute
-      if (selectedPeriod === "all" || itemPeriod === selectedPeriod) {
-          item.style.display = "block"; // Show matching items
-      } else {
-          item.style.display = "none"; // Hide non-matching items
-      }
-  });
-}
-
-
-// ** Functie om CSS custom property bij te werken **
-function updateListCount() {
-  const visibleItems = document.querySelectorAll('ul li.circle:not([style*="display: none"])').length;
-  document.documentElement.style.setProperty("--n", visibleItems); // Update --n op :root
-}
+// // ** Functie om CSS custom property bij te werken **
+// function updateListCount() {
+//   const visibleItems = document.querySelectorAll('ul li.circle:not([style*="display: none"])').length;
+//   document.documentElement.style.setProperty("--n", visibleItems + 1); // Update --n op :root
+// }
 
 // ** Filter data function (met update van --n) **
 function filterData() {
@@ -163,5 +154,6 @@ function filterData() {
       }
   });
 
-  updateListCount(); // **Update --n na filtering**
+  // updateListCount(); // **Update --n na filtering**
 }
+
