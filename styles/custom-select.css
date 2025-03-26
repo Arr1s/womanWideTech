@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
 @property --hue {
   syntax: "<angle>";
@@ -46,7 +45,7 @@ select {
   padding-block: 10px;
   padding-inline: 20px 30px;
   border-radius: 30px;
-  border: 4px solid oklch(54% 0.29 var(--hue));
+  border: 2px solid oklch(54% 0.29 var(--hue));
   cursor: pointer;
   
   @supports (appearance: base-select) {
@@ -59,75 +58,77 @@ select {
     &::picker-icon {
       display: none;
     }
-    &:open::picker-icon {
-      rotate: 180deg;
-    }
+
     &::picker(select) {
       padding: 0;
-      margin-top: 5px;
       border: 1px solid black;
       background: white;
       border-radius: 12px;
       font-weight: 400;
-      transform: translateX(-20%);
       opacity: 0;
       height: 0;
       overflow: clip;
       transition: height 0.5s ease-out, opacity 0.5s ease-out, overlay 0.5s,
         display 0.5s;
-
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr) auto;
       transition-behavior: allow-discrete;
     }
+
+    .grid-item.top {
+        grid-column: span 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
     &:open::picker(select) {
       opacity: 1;
       height: calc-size(auto, size);
       overflow: auto;
-      @starting-style {
-        opacity: 0;
-        height: 0;
-      }
     }
+
     option {
       display: flex;
       align-items: center;
       padding: 10px;
-      border-top: 1px solid #444;
       cursor: pointer;
-      transition-property: color, background;
-      transition-duration: 0.2s;
-      transition-timing-function: ease-out;
+
       img {
-        width: 30px;
+        width: 2em;
+        transition: 0.3s ease-in-out;
+      }
+      img:hover {
+        scale: 1.5;
       }
       &:where(:hover, :focus, :active) {
-        background: #ffe6e6;
+        background: #99dede;
         color: white;
       }
       &:checked {
-        background: oklch(10% 0.49 242);
+        background: #b395ff;
         color: white;
       }
       &::checkmark {
         display: none;
       }
-      &:first-child {
-        border: 0;
-      }
     }
+
     selectedcontent {
       line-height: 1;
       img {
         width: 50px;
       }
+
       span {
-        clip: rect(0 0 0 0);
-        clip-path: inset(50%);
-        height: 1px;
         overflow: hidden;
         position: absolute;
-        white-space: nowrap;
         width: 1px;
       }
     }
   }
 }
+
+
