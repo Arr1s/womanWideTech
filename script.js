@@ -58,24 +58,23 @@ getData(urlAll).then(dataEverbody => {
         ? ` <p>${personWork}</p>`
         : '';
 
-
-        let personHTML = 
-        `<section class="sidecard">
-            <img src="${personImgSrc}" alt="">
-            ${workDisplay}
-            <h2>${personName}</h2>
-            <div class="tags-container">
-                <p>${personShortName}</p>
-                <p>${personPeriod}</p>
-                <p>${personCountry}</p>
-            </div>
-            <h3>Visit:</h3>
-            <div class="link-container">
-                ${githubLink}
-                ${codepenlink}
-                ${websitelink}
-        </div>
-        </section>`;
+        // let personHTML = 
+        // `<section class="sidecard">
+        //     <img src="${personImgSrc}" alt="">
+        //     ${workDisplay}
+        //     <h2>${personName}</h2>
+        //     <div class="tags-container">
+        //         <p>${personShortName}</p>
+        //         <p>${personPeriod}</p>
+        //         <p>${personCountry}</p>
+        //     </div>
+        //     <h3>Visit:</h3>
+        //     <div class="link-container">
+        //         ${githubLink}
+        //         ${codepenlink}
+        //         ${websitelink}
+        // </div>
+        // </section>`;
         // voeg de HTML toe aan de section vóór het einde
         allSection.insertAdjacentHTML('beforeend', personHTML);
     })
