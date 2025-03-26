@@ -1,16 +1,15 @@
 :root {
-    --color-red: red;
-    --size-item: clamp(1.75em, 5vw, 3em);
-    
-    /* number of items per circle */
-    --n: 15;
+  --color-red: red;
+  --size-item: clamp(1.75em, 5vw, 3em);
 
-    /* radius circle */
-    --radius: calc(var(--size-item) * 3);
-    --radius-animation: calc(var(--radius) + var(--size-item));
+  /* Aantal items per cirkel (dynamisch in JS) */
+  --n: 1; /* Fallback-waarde als JS niet geladen is */
 
-    --animation-time: 60s;
-    --animation-delay: calc(var(--animation-time) / var(--n) * (var(--i) - var(--n)));
+  /* Radius voor de cirkel */
+  --radius: calc(var(--size-item) * 3);
+  --radius-animation: calc(var(--radius) + var(--size-item));
+
+  --animation-time: 60s;
 }
 
 
@@ -53,6 +52,7 @@
     border-radius: 50%;
     animation: rotate var(--animation-time) infinite linear;
     animation-delay: calc(-1 * var(--animation-time) / var(--n) * var(--i));
+    /* animation-delay: calc(-1 * var(--animation-time) / sibling-count() * sibling-index()); */
 }
 
 

@@ -23,26 +23,27 @@
     <main>
                 
         <section>
-            <select>
+            <label for="periodSelect">Select a period:</label>
+            <select id="periodSelect" onchange="filterData()">
                 <button>
                   <selectedcontent></selectedcontent>
                 </button>
-                <option value="first" class="grid-item top">
+                <option value="all" class="grid-item top">
                   <img src="images/allwomen.svg" alt="" />
                   <span>All</span>
                 </option>
-                <option value="second">
+                <option value="way back">
                   <img src="images/lamp.svg" alt="" />
                   <span>Way Back</span>
                 </option>
-                <option value="third">
+                <option value="web pioneer">
                   <img src="images/internet.svg" alt="" />
                   <span>Web pioneer</span>
                 </option>
-                <option value="third">
+                <option value="web maturity">
                     <img src="images/tandwiel.svg" alt="" />
                     <span>Web Maturity</span>
-                  </option> <option value="fifth">
+                  </option> <option value="web weirdness">
                     <img src="images/regenboog.svg" alt="" />
                     <span>Web Weirdness</span>
                   </option>
@@ -50,7 +51,7 @@
           </section>
   
       <section>
-            <ul class="carousel">
+            <ul class="carousel" id="filteredData">
 
                 <li class="container"></li>
                 
