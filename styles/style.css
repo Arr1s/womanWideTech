@@ -1,6 +1,7 @@
 :root {
   --clipPath: 45%;
 
+  /* colors */
   --color-blue: #7ddef5;
   --color-white: #fff;
   --color-black: #000;
@@ -8,12 +9,7 @@
   --color-pink: #f3d0fc;
   --color-yellow: #fcf9d0;
   --color-purple: #d0dafc;
-}
 
-@property --hue {
-  syntax: "<angle>";
-  inherits: true;
-  initial-value: 180deg;
   --size-item: clamp(2em, 7vmin, 3.5em);
 
   /* Aantal items per cirkel (dynamisch in JS) */
@@ -24,6 +20,12 @@
   --radius-animation: calc(var(--radius) + var(--size-item));
 
   --animation-time: 60s;
+}
+
+@property --hue {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 180deg;
 }
 
 
@@ -61,27 +63,27 @@ ul {
   margin-top: 2em;
   transition: 0.1s ease-in-out;
   box-shadow:
-    -5vw 35vh 0 0 --color-white,
-    65vw 12vh 0 0 --color-white,
-    85vw 72vh 0 0 --color-white,
-    -30vw 50vh 0 0 #ffffff,
-    95vw 10vh 0 0 #ffffff,
-    20vw 60vh 0 0 #ffffff,
-    -80vw 30vh 0 0 #ffffff,
-    42vw 82vh 0 0 #ffffff,
-    -25vw 40vh 0 0 #ffffff,
-    70vw 90vh 0 0 #ffffff,
-    50vw 70vh 0 0 #ffffff,
-    -60vw 80vh 0 0 #ffffff,
-    15vw 95vh 0 0 #ffffff,
-    -55vw 30vh 0 0 #ffffff,
-    75vw 50vh 0 0 #ffffff,
-    -40vw 20vh 0 0 #ffffff,
-    30vw 85vh 0 0 #ffffff,
-    -70vw 60vh 0 0 #ffffff,
-    60vw 15vh 0 0 #ffffff,
-    5vw 25vh 0 0 #ffffff,
-    -10vw 90vh 0 0 #ffffff;
+    -5vw 35vh 0 0 var(--color-white),
+    65vw 12vh 0 0 var(--color-white),
+    85vw 72vh 0 0 var(--color-white),
+    -30vw 50vh 0 0 var(--color-white),
+    95vw 10vh 0 0 var(--color-white),
+    20vw 60vh 0 0 var(--color-white),
+    -80vw 30vh 0 0 var(--color-white),
+    42vw 82vh 0 0 var(--color-white),
+    -25vw 40vh 0 0 var(--color-white),
+    70vw 90vh 0 0 var(--color-white),
+    50vw 70vh 0 0 var(--color-white),
+    -60vw 80vh 0 0 var(--color-white),
+    15vw 95vh 0 0 var(--color-white),
+    -55vw 30vh 0 0 var(--color-white),
+    75vw 50vh 0 0 var(--color-white),
+    -40vw 20vh 0 0 var(--color-white),
+    30vw 85vh 0 0 var(--color-white),
+    -70vw 60vh 0 0 var(--color-white),
+    60vw 15vh 0 0 var(--color-white),
+    5vw 25vh 0 0 var(--color-white),
+    -10vw 90vh 0 0 var(--color-white);
 
   &::before {
     content: "";
@@ -93,34 +95,34 @@ ul {
     top: 0;
     margin-top: 2em;
     box-shadow:
-      -43vw 12vh 0 0 #ffffff,
-      27vw 28vh 0 0 #ffffff,
-      -55vw 25vh 0 0 #ffffff,
-      19vw 30vh 0 0 #ffffff,
-      -50vw 7vh 0 0 #ffffff,
-      9vw 22vh 0 0 #ffffff,
-      -32vw 28vh 0 0 #ffffff,
-      45vw 13vh 0 0 #ffffff,
-      -24vw 19vh 0 0 #ffffff,
-      11vw 9vh 0 0 #ffffff,
-      -18vw 31vh 0 0 #ffffff,
-      51vw 21vh 0 0 #ffffff,
-      -12vw 16vh 0 0 #ffffff,
-      58vw 33vh 0 0 #ffffff,
-      -38vw 23vh 0 0 #ffffff,
-      17vw 18vh 0 0 #ffffff,
-      -60vw 30vh 0 0 #ffffff,
-      25vw 27vh 0 0 #ffffff,
-      -44vw 5vh 0 0 #ffffff,
-      39vw 11vh 0 0 #ffffff,
-      -29vw 30vh 0 0 #ffffff,
-      50vw 16vh 0 0 #ffffff,
-      -47vw 19vh 0 0 #ffffff,
-      33vw 28vh 0 0 #ffffff,
-      -40vw 12vh 0 0 #ffffff,
-      53vw 26vh 0 0 #ffffff,
-      -15vw 18vh 0 0 #ffffff,
-      60vw 5vh 0 0 #ffffff;
+      -43vw 12vh 0 0 var(--color-white),
+      27vw 28vh 0 0 var(--color-white),
+      19vw 30vh 0 0 var(--color-white),
+      -50vw 7vh 0 0 var(--color-white),
+      9vw 22vh 0 0 var(--color-white),
+      -32vw 28vh 0 0 var(--color-white),
+      45vw 13vh 0 0 var(--color-white),
+      -24vw 19vh 0 0 var(--color-white),
+      11vw 9vh 0 0 var(--color-white),
+      -18vw 31vh 0 0 var(--color-white),
+      51vw 21vh 0 0 var(--color-white),
+      -12vw 16vh 0 0 var(--color-white),
+      58vw 33vh 0 0 var(--color-white),
+      -38vw 23vh 0 0 var(--color-white),
+      17vw 18vh 0 0 var(--color-white),
+      -60vw 30vh 0 0 var(--color-white),
+      25vw 27vh 0 0 var(--color-white),
+      -44vw 5vh 0 0 var(--color-white),
+      39vw 11vh 0 0 var(--color-white),
+      -29vw 30vh 0 0 var(--color-white),
+      50vw 16vh 0 0 var(--color-white),
+      -47vw 19vh 0 0 var(--color-white),
+      33vw 28vh 0 0 var(--color-white),
+      -40vw 12vh 0 0 var(--color-white),
+      53vw 26vh 0 0 var(--color-white),
+      -15vw 18vh 0 0 var(--color-white),
+      -55vw 25vh 0 0 var(--color-white),
+      60vw 5vh 0 0 var(--color-white);
   }
 }
 
