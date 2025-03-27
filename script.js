@@ -41,7 +41,7 @@ getData(urlAll).then(data => {
 
     // HTML selecting
     let allSection = document.querySelector('section:nth-of-type(1)');
-    let thirdSection = document.querySelector('section:nth-of-type(3)');
+    let thirdSection = document.querySelector('.container-codepen');
     let carouselUl = document.querySelector('ul');
 
     // For each person code
