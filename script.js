@@ -107,7 +107,7 @@ getData(urlAll).then(data => {
     });
 
     // Roep filterData pas aan als data is geladen
-    filterData();
+    // filterData();
 
     
     document.querySelectorAll(".sidecard").forEach(sidecard => {
@@ -161,26 +161,53 @@ document.querySelector("#scroller").addEventListener('scrollsnapchanging', event
 
 
 
-// // ** Functie om CSS custom property bij te werken **
-// function updateListCount() {
-//   const visibleItems = document.querySelectorAll('ul li.circle:not([style*="display: none"])').length;
-//   document.documentElement.style.setProperty("--n", visibleItems + 1); // Update --n op :root
+// ** Functie om CSS custom property bij te werken **
+function updateListCount() {
+  const visibleItems = document.querySelectorAll('ul li.circle:not([style*="display: none"])').length;
+  document.documentElement.style.setProperty("--n", visibleItems + 1); // Update --n op :root
+}
+
+// // ** Filter data function (met update van --n) **
+// function filterData() {
+//   const selectedPeriod = document.getElementById('periodSelect').value;
+//   const allListItems = document.querySelectorAll('ul li.circle');
+
+//   allListItems.forEach(item => {
+//       const itemPeriod = item.getAttribute('data-period');
+//       if (selectedPeriod === "all" || itemPeriod === selectedPeriod) {
+//           item.style.display = "block";
+//       } else {
+//           item.style.display = "none";
+//       }
+//   });
+
+//   // updateListCount(); // **Update --n na filtering**
+
 // }
 
-// ** Filter data function (met update van --n) **
-function filterData() {
+const select = document.querySelector("select");
+select.onchange = () => {
+
   const selectedPeriod = document.getElementById('periodSelect').value;
   const allListItems = document.querySelectorAll('ul li.circle');
 
-  allListItems.forEach(item => {
-      const itemPeriod = item.getAttribute('data-period');
-      if (selectedPeriod === "all" || itemPeriod === selectedPeriod) {
-          item.style.display = "block";
-      } else {
-          item.style.display = "none";
-      }
-  });
+const imageAnimation = document.querySelectorAll('ul li img');
+allListItems.forEach(item => {
 
-  // updateListCount(); // **Update --n na filtering**
+const itemPeriod = item.getAttribute('data-period');
+if (selectedPeriod === "all" || itemPeriod === selectedPeriod) {
+    item.style.display = "block";
+} else {
+    item.style.display = "none";
 }
+});
+imageAnimation.forEach(item => {
+item.getAnimations().forEach( anim => {
+  anim.cancel();
+  anim.play();
+})
+})
+updateListCount(); // **Update --n na filtering**
+}
+
 
