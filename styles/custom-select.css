@@ -1,10 +1,8 @@
+/* ============= */
+/* CUSTOM SELECT */
+/* ============= */
 
-@property --hue {
-  syntax: "<angle>";
-  inherits: true;
-  initial-value: 180deg;
-}
-
+/* color changing animation */
 @keyframes rotateHue {
   0% {
     --hue: 180deg;
@@ -18,7 +16,7 @@
 }
 
 
-
+/* the custom select */
 select {
   appearance: none;
   @supports (appearance: base-select) {
@@ -37,12 +35,12 @@ select {
   }
 }
 
-
+/* The area with all the options*/
 ::picker(select) {
   padding: 0;
   margin: 0.5em;
-  border: 1px solid black;
-  background: white;
+  border: 1px solid var(--color-black);
+  background: var(--color-white);
   border-radius: 12px;
   font-weight: 400;
   opacity: 0;
@@ -62,8 +60,8 @@ select {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: black;
-  background-color: #7ddef5;
+  color: var(--color-black);
+  background-color: var(--color-blue);
   padding-block: 10px;
   padding-inline: 20px 30px;
   border-radius: 30px;
@@ -88,13 +86,13 @@ select {
         align-items: center;
     }
 
-
     &:open::picker(select) {
       opacity: 1;
       height: calc-size(auto, size);
       overflow: auto;
     }
 
+/* The Options*/
     option {
       display: flex;
       align-items: center;
@@ -109,11 +107,11 @@ select {
         scale: 1.5;
       }
       &:where(:hover, :focus, :active) {
-        background: #99dede;
+        background: var(--color-blue);
         color: white;
       }
       &:checked {
-        background: #b395ff;
+        background: var(--color-pink);
         color: white;
       }
       &::checkmark {
@@ -121,6 +119,7 @@ select {
       }
     }
 
+    /* Selected content */
     selectedcontent {
       line-height: 1;
       img {
