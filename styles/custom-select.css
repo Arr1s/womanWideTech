@@ -42,7 +42,7 @@ select {
   justify-content: space-between;
   align-items: center;
   color: black;
-  background-color: red;
+  background-color: #7ddef5;
   padding-block: 10px;
   padding-inline: 20px 30px;
   border-radius: 30px;
@@ -75,6 +75,8 @@ select {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, 1fr) auto;
       transition-behavior: allow-discrete;
+
+      position-area: block-start span-inline-start; /* moves it above and left */
     }
 
     .grid-item.top {
@@ -131,5 +133,3 @@ select {
     }
   }
 }
-
-

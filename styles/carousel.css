@@ -1,5 +1,5 @@
 :root {
-  --size-item: clamp(2em, 10vw, 3.5em);
+  --size-item: clamp(2em, 7vmin, 3.5em);
 
   /* Aantal items per cirkel (dynamisch in JS) */
   --n: 50; /* Fallback-waarde als JS niet geladen is */

@@ -24,8 +24,6 @@
 
   scrollbar-width: none;
 
-  anchor-name: --anchor-el;
-
   &::-webkit-scrollbar {
     width: 0px;
     height: 0px;
