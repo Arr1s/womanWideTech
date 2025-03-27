@@ -139,14 +139,16 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  height: 100%;
 }
 
 .car-cont {
   display: flex;
-  justify-content: center; /* Horizontally center carousel */
+  justify-content: center;
   align-items: center;
   width: 100%;
-  overflow: clip;
+  /* height: 100%; */
+  overflow-x: clip;
 }
 
 @media (max-width: 750px) {
@@ -157,7 +159,7 @@ main {
 
   main {
     display: flex;
-    flex-direction: column; /* Stack vertically */
+    flex-direction: column;
     align-items: center;
     justify-content: center;
   }
@@ -174,8 +176,7 @@ main {
 
   select {
     @supports (appearance: base-select) {
-      width: auto;
-      height: max-content;
+      scale: .8;
     }
   }
   
