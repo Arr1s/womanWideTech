@@ -1,3 +1,7 @@
+/* ========================== */
+/* CODEPENS HORIZONTAL SCROLL */
+/* ========================== */
+
 .container-codepen {
   width: calc(var(--radius) * 2);
   height: calc(var(--radius) * 2);
@@ -22,8 +26,8 @@
   overscroll-behavior-x: contain;
   scroll-snap-type: x mandatory;
 
+  /* scrollbar x chrome, safari, firefox */
   scrollbar-width: none;
-
   &::-webkit-scrollbar {
     width: 0px;
     height: 0px;
@@ -41,14 +45,6 @@
     scroll-snap-align: var(--_snap-align, center);
     display: grid;
     place-items: center;
-
-    &.changing {
-      background: green;
-    }
-
-    &.change {
-      color: blue;
-    }
   }
 
   iframe {
@@ -63,7 +59,7 @@
     position: absolute;
     font-size: .8em;
     top: 9%;
-    background-color: #7ddef5;
+    background-color: var(--color-blue);
     border-radius: 1em;
     width: max-content;
     padding: 0 .5em ;
