@@ -105,10 +105,6 @@ getData(urlAll).then(data => {
         thirdSection.insertAdjacentHTML('beforeend', codepenShowcaseArticle);
         carouselUl.insertAdjacentHTML('beforeend', fotoVrouwen);
     });
-
-    // Roep filterData pas aan als data is geladen
-    filterData();
-
     
     document.querySelectorAll(".sidecard").forEach(sidecard => {
       sidecard.style.display = "none";
@@ -139,48 +135,36 @@ getData(urlAll).then(data => {
 });
 
 
+// ** Functie om CSS custom property bij te werken **
+function updateListCount(extraPadding) {
+  const visibleItems = document.querySelectorAll('ul li.circle:not([style*="display: none"])').length;
+  document.documentElement.style.setProperty("--n", visibleItems + extraPadding); // Update --n op :root
+}
 
-// Scroll snap code
-const state = {
-    changed: null, 
-    changing: null,
-};
+const select = document.querySelector("select");
+select.onchange = () => {
 
-document.querySelector("#scroller").addEventListener('scrollsnapchange', event => {
-    state.changed?.classList.remove('change');
-    event.snapTargetInline.classList.add('change');
-    state.changed = event.snapTargetInline;
-});
-
-document.querySelector("#scroller").addEventListener('scrollsnapchanging', event => {
-    state.changed?.classList.remove('change');
-    state.changing?.classList.remove('changing');
-    event.snapTargetInline.classList.add('changing');
-    state.changing = event.snapTargetInline;
-});
-
-
-
-// // ** Functie om CSS custom property bij te werken **
-// function updateListCount() {
-//   const visibleItems = document.querySelectorAll('ul li.circle:not([style*="display: none"])').length;
-//   document.documentElement.style.setProperty("--n", visibleItems + 1); // Update --n op :root
-// }
-
-// ** Filter data function (met update van --n) **
-function filterData() {
   const selectedPeriod = document.getElementById('periodSelect').value;
   const allListItems = document.querySelectorAll('ul li.circle');
 
+  const imageAnimation = document.querySelectorAll('ul li img');
   allListItems.forEach(item => {
-      const itemPeriod = item.getAttribute('data-period');
-      if (selectedPeriod === "all" || itemPeriod === selectedPeriod) {
-          item.style.display = "block";
-      } else {
-          item.style.display = "none";
-      }
+
+    const itemPeriod = item.getAttribute('data-period');
+    if (selectedPeriod === "all" || itemPeriod === selectedPeriod) {
+    item.style.display = "block";
+    } else {
+    item.style.display = "none";
+  }
   });
 
-  // updateListCount(); // **Update --n na filtering**
+  imageAnimation.forEach(item => {
+  item.getAnimations().forEach( anim => {
+    anim.cancel();
+    anim.play();
+    })
+  })
+  updateListCount(selectedPeriod == 'all' ? 0 : 1); // **Update --n na filtering**
 }
+
 
