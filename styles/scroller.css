@@ -59,10 +59,13 @@
   }
 
   h3 {
-    color: white;
+    /* color: white; */
     position: absolute;
-    bottom: 0;
-    background-color: black;
+    font-size: .8em;
+    top: 9%;
+    background-color: #7ddef5;
+    border-radius: 1em;
     width: max-content;
+    padding: 0 .5em ;
   }
 }

@@ -97,6 +97,10 @@ ul {
 
 /* styling joost */
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -167,6 +171,11 @@ main {
   .car-cont {
     order: -1;
     margin: 2em 0;
+
+    .container-codepen h3 {
+      font-size: .7em;
+      top: 10%;
+    }
   }
 
   .sel-cont {
@@ -185,4 +194,6 @@ main {
     order: 1; /* Puts card-cont below */
     align-items: center;
   }
+
+  
 }

@@ -95,7 +95,7 @@ getData(urlAll).then(data => {
         // Foto's voor de orbiting li's code
         let fotoVrouwen = 
         `<li class="circle" style="--i:${personID};" data-period="${personPeriod}">
-        <a href="#" data-id="${personID}">
+        <a href="#card-scroll" data-id="${personID}">
         <img src="${personImgSrc}" alt="foto van ${personName}" data-id="${personID}">
           </a>
         </li>`;
@@ -114,7 +114,7 @@ getData(urlAll).then(data => {
   const links = document.querySelectorAll("ul li a");
     links.forEach(link => {
       link.addEventListener("click", function (event) {
-          event.preventDefault(); // Voorkom standaard a-actie
+        //   event.preventDefault(); // Voorkom standaard a-actie
   
           const clickedId = this.dataset.id; // Haal ID op
           console.log("Geklikt op ID:", clickedId);
