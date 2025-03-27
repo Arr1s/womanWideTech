@@ -1,16 +1,6 @@
-:root {
-  --size-item: clamp(2em, 7vmin, 3.5em);
-
-  /* Aantal items per cirkel (dynamisch in JS) */
-  --n: 50; /* Fallback-waarde als JS niet geladen is */
-
-  /* Radius voor de cirkel */
-  --radius: calc(var(--size-item) * 3);
-  --radius-animation: calc(var(--radius) + var(--size-item));
-
-  --animation-time: 60s;
-}
-
+/* =================== */
+/* WORLD IMG ANIMATION */
+/* =================== */
 
 .carousel {
     position:relative;
@@ -20,19 +10,6 @@
     height: calc(var(--radius) * 4);
 
 }
-
-/* .container {
-    width: calc(var(--radius) * 2);
-    height: calc(var(--radius) * 2);
-    background-color: blue;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    z-index: 2;
-
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-} */
 
 .circle {
     position: absolute;
@@ -56,6 +33,9 @@
     object-fit: cover;
 }
 
+.circle img:hover {
+  box-shadow: 0 0 10px 0 var(--color-white);
+}
 
 
 @keyframes rotate {
