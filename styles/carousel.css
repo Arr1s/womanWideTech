@@ -48,12 +48,12 @@
 
 .circle img {
     width: 100%;
-    height: 100%;
     border-radius: 50%;
     animation: rotate var(--animation-time) infinite linear;
     animation-delay: calc(-1 * var(--animation-time) / var(--n) * var(--i));
     /* animation-delay: calc(-1 * var(--animation-time) / sibling-count() * sibling-index()); */
-
+    aspect-ratio: 1;
+    object-fit: cover;
 }
 
 

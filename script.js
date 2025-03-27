@@ -136,9 +136,9 @@ getData(urlAll).then(data => {
 
 
 // ** Functie om CSS custom property bij te werken **
-function updateListCount() {
+function updateListCount(extraPadding) {
   const visibleItems = document.querySelectorAll('ul li.circle:not([style*="display: none"])').length;
-  document.documentElement.style.setProperty("--n", visibleItems + 1); // Update --n op :root
+  document.documentElement.style.setProperty("--n", visibleItems + extraPadding); // Update --n op :root
 }
 
 const select = document.querySelector("select");
@@ -164,7 +164,7 @@ select.onchange = () => {
     anim.play();
     })
   })
-  updateListCount(); // **Update --n na filtering**
+  updateListCount(selectedPeriod == 'all' ? 0 : 1); // **Update --n na filtering**
 }
 
 
