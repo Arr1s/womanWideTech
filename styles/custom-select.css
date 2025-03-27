@@ -42,6 +42,7 @@ select {
   justify-content: space-between;
   align-items: center;
   color: black;
+  background-color: red;
   padding-block: 10px;
   padding-inline: 20px 30px;
   border-radius: 30px;

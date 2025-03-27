@@ -1,99 +1,196 @@
 :root {
-    --clipPath: 45%;
-  }
-  
+  --clipPath: 45%;
+}
+
 * {
-    margin: 0;
-    padding: 0;
-  }
+  margin: 0;
+  padding: 0;
+}
 
 body {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-color: rgb(37, 37, 37);
-  }
-  
-img {
-      width: 10%;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: rgb(37, 37, 37);
 }
+
+/* img {
+      width: 10%;
+} */
 
 ul {
-    list-style: none;
-    padding-inline-start: 0;
+  list-style: none;
+  padding-inline-start: 0;
 }
 
 
 
-/* tars */
+/* stars */
 .stars {
   z-index: -1;
-        height: 0.3em;
-        aspect-ratio: 1;
-        border-radius: 50%;
-        background-color: rgb(63, 16, 16);
-        position: absolute;
-        top: 0;
-        margin-top: 2em;
-        transition: 0.1s ease-in-out;
-        box-shadow:
-        -5vw 35vh 0 0 #ffffff,
-        65vw 12vh 0 0 #ffffff,
-        85vw 72vh 0 0 #ffffff,
-        -30vw 50vh 0 0 #ffffff,
-        95vw 10vh 0 0 #ffffff,
-        20vw 60vh 0 0 #ffffff,
-        -80vw 30vh 0 0 #ffffff,
-        42vw 82vh 0 0 #ffffff,
-        -25vw 40vh 0 0 #ffffff,
-        70vw 90vh 0 0 #ffffff,
-        50vw 70vh 0 0 #ffffff,
-        -60vw 80vh 0 0 #ffffff,
-        15vw 95vh 0 0 #ffffff,
-        -55vw 30vh 0 0 #ffffff,
-        75vw 50vh 0 0 #ffffff,
-        -40vw 20vh 0 0 #ffffff,
-        30vw 85vh 0 0 #ffffff,
-        -70vw 60vh 0 0 #ffffff,
-        60vw 15vh 0 0 #ffffff,
-        5vw 25vh 0 0 #ffffff,
-        -10vw 90vh 0 0 #ffffff;
+  height: 0.3em;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: rgb(63, 16, 16);
+  position: absolute;
+  top: 0;
+  margin-top: 2em;
+  transition: 0.1s ease-in-out;
+  box-shadow:
+    -5vw 35vh 0 0 #ffffff,
+    65vw 12vh 0 0 #ffffff,
+    85vw 72vh 0 0 #ffffff,
+    -30vw 50vh 0 0 #ffffff,
+    95vw 10vh 0 0 #ffffff,
+    20vw 60vh 0 0 #ffffff,
+    -80vw 30vh 0 0 #ffffff,
+    42vw 82vh 0 0 #ffffff,
+    -25vw 40vh 0 0 #ffffff,
+    70vw 90vh 0 0 #ffffff,
+    50vw 70vh 0 0 #ffffff,
+    -60vw 80vh 0 0 #ffffff,
+    15vw 95vh 0 0 #ffffff,
+    -55vw 30vh 0 0 #ffffff,
+    75vw 50vh 0 0 #ffffff,
+    -40vw 20vh 0 0 #ffffff,
+    30vw 85vh 0 0 #ffffff,
+    -70vw 60vh 0 0 #ffffff,
+    60vw 15vh 0 0 #ffffff,
+    5vw 25vh 0 0 #ffffff,
+    -10vw 90vh 0 0 #ffffff;
 
-        &::before {
-            content: "";
-            height: 0.2em;
-            aspect-ratio: 1;
-            border-radius: 50%;
-            background-color: rgb(255, 255, 255);
-            position: absolute;
-            top: 0;
-            margin-top: 2em;
-            box-shadow:
-            -43vw 12vh 0 0 #ffffff,
-            27vw 28vh 0 0 #ffffff,
-            -55vw 25vh 0 0 #ffffff,
-            19vw 30vh 0 0 #ffffff,
-            -50vw 7vh 0 0 #ffffff,
-            9vw 22vh 0 0 #ffffff,
-            -32vw 28vh 0 0 #ffffff,
-            45vw 13vh 0 0 #ffffff,
-            -24vw 19vh 0 0 #ffffff,
-            11vw 9vh 0 0 #ffffff,
-            -18vw 31vh 0 0 #ffffff,
-            51vw 21vh 0 0 #ffffff,
-            -12vw 16vh 0 0 #ffffff,
-            58vw 33vh 0 0 #ffffff,
-            -38vw 23vh 0 0 #ffffff,
-            17vw 18vh 0 0 #ffffff,
-            -60vw 30vh 0 0 #ffffff,
-            25vw 27vh 0 0 #ffffff,
-            -44vw 5vh 0 0 #ffffff,
-            39vw 11vh 0 0 #ffffff,
-            -29vw 30vh 0 0 #ffffff,
-            50vw 16vh 0 0 #ffffff,
-            -47vw 19vh 0 0 #ffffff,
-            33vw 28vh 0 0 #ffffff,
-            -40vw 12vh 0 0 #ffffff,
-            53vw 26vh 0 0 #ffffff,
-            -15vw 18vh 0 0 #ffffff,
-            60vw 5vh 0 0 #ffffff;
-        }
-      }
+  &::before {
+    content: "";
+    height: 0.2em;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    top: 0;
+    margin-top: 2em;
+    box-shadow:
+      -43vw 12vh 0 0 #ffffff,
+      27vw 28vh 0 0 #ffffff,
+      -55vw 25vh 0 0 #ffffff,
+      19vw 30vh 0 0 #ffffff,
+      -50vw 7vh 0 0 #ffffff,
+      9vw 22vh 0 0 #ffffff,
+      -32vw 28vh 0 0 #ffffff,
+      45vw 13vh 0 0 #ffffff,
+      -24vw 19vh 0 0 #ffffff,
+      11vw 9vh 0 0 #ffffff,
+      -18vw 31vh 0 0 #ffffff,
+      51vw 21vh 0 0 #ffffff,
+      -12vw 16vh 0 0 #ffffff,
+      58vw 33vh 0 0 #ffffff,
+      -38vw 23vh 0 0 #ffffff,
+      17vw 18vh 0 0 #ffffff,
+      -60vw 30vh 0 0 #ffffff,
+      25vw 27vh 0 0 #ffffff,
+      -44vw 5vh 0 0 #ffffff,
+      39vw 11vh 0 0 #ffffff,
+      -29vw 30vh 0 0 #ffffff,
+      50vw 16vh 0 0 #ffffff,
+      -47vw 19vh 0 0 #ffffff,
+      33vw 28vh 0 0 #ffffff,
+      -40vw 12vh 0 0 #ffffff,
+      53vw 26vh 0 0 #ffffff,
+      -15vw 18vh 0 0 #ffffff,
+      60vw 5vh 0 0 #ffffff;
+  }
+}
+
+
+/* styling joost */
+
+body {
+  display: flex;
+  flex-direction: column;
+  max-height: 100vh;
+  min-width: 100vw;
+  overflow-x: hidden;
+}
+
+main {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  /* align-items: center; */
+  /* justify-content: center; */
+  flex-grow: 1;
+  gap: 2em;
+  width: 100vw;
+}
+
+.sel-cont {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 1em;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  gap: .5em;
+  z-index: 3;
+
+  select {
+    order: -1;
+  }
+
+  label {
+    font-family: 'Inter', sans-serif;
+    color: white;
+  }
+}
+
+.card-cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.car-cont {
+  display: flex;
+  justify-content: center; /* Horizontally center carousel */
+  align-items: center;
+  width: 100%;
+  overflow: clip;
+}
+
+@media (max-width: 750px) {
+  
+  .sidecard {
+    min-width: 260px;
+    /* max-width: 260px; */
+  }
+
+  main {
+    display: flex;
+    flex-direction: column; /* Stack vertically */
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .car-cont {
+    order: -1;
+    margin: 2em 0;
+    /* width: max-content; */
+  }
+
+  .sel-cont {
+    position: relative;
+    margin: 0;
+  }
+
+  select {
+    @supports (appearance: base-select) {
+      width: auto;
+      height: max-content;
+    }
+  }
+  
+
+  .card-cont {
+    order: 1; /* Puts card-cont below */
+    align-items: center;
+  }
+}

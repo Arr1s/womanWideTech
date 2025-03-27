@@ -1,6 +1,5 @@
 :root {
-  --color-red: red;
-  --size-item: clamp(1.75em, 5vw, 3em);
+  --size-item: clamp(2em, 10vw, 3.5em);
 
   /* Aantal items per cirkel (dynamisch in JS) */
   --n: 50; /* Fallback-waarde als JS niet geladen is */
@@ -16,13 +15,13 @@
 .carousel {
     position:relative;
 
+    width: max-content;
     width: calc(var(--radius) * 4);
     height: calc(var(--radius) * 4);
 
-    background-color: var(--color-red);
 }
 
-.container {
+/* .container {
     width: calc(var(--radius) * 2);
     height: calc(var(--radius) * 2);
     background-color: blue;
@@ -33,7 +32,7 @@
 
     border-radius: 50%;
     transform: translate(-50%, -50%);
-}
+} */
 
 .circle {
     position: absolute;
@@ -44,6 +43,7 @@
     z-index: 1;
 
     transform: translate(-50%, -50%);
+    
 }
 
 .circle img {
@@ -53,6 +53,7 @@
     animation: rotate var(--animation-time) infinite linear;
     animation-delay: calc(-1 * var(--animation-time) / var(--n) * var(--i));
     /* animation-delay: calc(-1 * var(--animation-time) / sibling-count() * sibling-index()); */
+
 }
 
 

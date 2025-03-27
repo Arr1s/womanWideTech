@@ -23,64 +23,45 @@
     </header>
 
     <main>
-        <div class="stars"></div>
-                
-        <section>
-            <label for="periodSelect">Select a period:</label>
-            <select id="periodSelect" onchange="filterData()">
-                <button>
-                  <selectedcontent></selectedcontent>
-                </button>
-                <option value="all" class="grid-item top">
-                  <img src="images/allwomen.svg" alt="" />
-                  <span>All</span>
-                </option>
-                <option value="way back">
-                  <img src="images/lamp.svg" alt="" />
-                  <span>Way Back</span>
-                </option>
-                <option value="web pioneer">
-                  <img src="images/internet.svg" alt="" />
-                  <span>Web pioneer</span>
-                </option>
-                <option value="web maturity">
-                    <img src="images/tandwiel.svg" alt="" />
-                    <span>Web Maturity</span>
-                  </option> <option value="web weirdness">
-                    <img src="images/regenboog.svg" alt="" />
-                    <span>Web Weirdness</span>
-                  </option>
-              </select>
-          </section>
-  
-      <section>
-            <ul class="carousel" id="filteredData">
+      <div class="stars"></div>
 
-                <li class="container"></li>
-                
-                <!-- cirlce -->
-                <!-- <li class="circle" style="--i:0;"><img src="images/woman-img.webp" alt=""></li>
-                <li class="circle" style="--i:1;"><img src="images/woman-img.webp" alt=""></li>
-                <li class="circle" style="--i:2;"><img src="images/woman-img.webp" alt=""></li>
-                <li class="circle" style="--i:3;"><img src="images/woman-img.webp" alt=""></li>
-                <li class="circle" style="--i:4;"><img src="images/woman-img.webp" alt=""></li>
-                <li class="circle" style="--i:5;"><img src="images/woman-img.webp" alt=""></li>
-                <li class="circle" style="--i:6;"><img src="images/woman-img.webp" alt=""></li>
-                <li class="circle" style="--i:7;"><img src="images/woman-img.webp" alt=""></li>
-                <li class="circle" style="--i:8;"><img src="images/woman-img.webp" alt=""></li>
-                <li class="circle" style="--i:9;"><img src="images/woman-img.webp" alt=""></li>
-                <li class="circle" style="--i:10;"><img src="images/woman-img.webp" alt=""></li>
-                <li class="circle" style="--i:11;"><img src="images/woman-img.webp" alt=""></li>
-                <li class="circle" style="--i:12;"><img src="images/woman-img.webp" alt=""></li>
-                <li class="circle" style="--i:13;"><img src="images/woman-img.webp" alt=""></li>
-                <li class="circle" style="--i:14;"><img src="images/woman-img.webp" alt=""></li> -->
-            </ul>
-        </section>
-  
-        <section id="scroller" tabindex="0">
-            
-        </section>
-       
+      <section class="card-cont">
+      </section>
+
+      <section class="car-cont">
+        <ul class="carousel" id="filteredData">
+          <li class="container-codepen"></li>
+        </ul>
+      </section>
+
+      <section class="sel-cont">
+        <label for="periodSelect">Select a period</label>
+        <select id="periodSelect" onchange="filterData()">
+          <button>
+            <selectedcontent></selectedcontent>
+          </button>
+          <option value="all" class="grid-item top">
+            <img src="images/allwomen.svg" alt="" />
+            <span>All</span>
+          </option>
+          <option value="way back">
+            <img src="images/lamp.svg" alt="" />
+            <span>Way Back</span>
+          </option>
+          <option value="web pioneer">
+            <img src="images/internet.svg" alt="" />
+            <span>Web pioneer</span>
+          </option>
+          <option value="web maturity">
+            <img src="images/tandwiel.svg" alt="" />
+            <span>Web Maturity</span>
+          </option>
+          <option value="web weirdness">
+            <img src="images/regenboog.svg" alt="" />
+            <span>Web Weirdness</span>
+          </option>
+        </select>
+      </section>
     </main>
 
     <footer>

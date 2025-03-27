@@ -8,14 +8,13 @@
 
 header {
     display: flex;
-   justify-content: center;
-align-items: center;
-margin: 1em;
-
+    justify-content: center;
+    align-items: center;
+    margin: 1em;
 }
 
 header h1 {
-    font-family: 'Inter', sans-serif; 
+    font-family: 'Inter', sans-serif;
     color: white;
     font-weight: 400;
     font-size: 1.5em;
@@ -25,32 +24,27 @@ header h1 {
     padding-left: 0.5em;
     margin-left: 0.5em;
     height: 2.2em;
-    font-variation-settings: "wght" 100;
-    animation: animating-titles 3s alternate infinite; 
+    font-variation-settings: "wght"100;
+    animation: animating-titles 3s alternate infinite;
 }
 
 @keyframes animating-titles {
     0% {
-     font-variation-settings: "wght" 100; 
+        font-variation-settings: "wght"100;
     }
 
     50% {
         color: #d194ed;
     }
-    
-    100% {
-        font-variation-settings: "wght" 900; 
-      color: #ebd1ff;
-    
 
+    100% {
+        font-variation-settings: "wght"900;
+        color: #ebd1ff;
     }
 }
-
 
 header img {
     width: 4em;
     aspect-ratio: 1;
     border-radius: 50%;
 }
-
-
