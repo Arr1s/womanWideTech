@@ -157,6 +157,11 @@ main {
     min-width: 260px;
   }
 
+  select::picker(select) {
+    position-area: bottom;
+    position-try-fallbacks: flip-block;
+  }
+
   main {
     display: flex;
     flex-direction: column;
@@ -179,6 +184,7 @@ main {
       scale: .8;
     }
   }
+
   
 
   .card-cont {

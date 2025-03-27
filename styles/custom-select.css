@@ -37,6 +37,27 @@ select {
   }
 }
 
+
+::picker(select) {
+  padding: 0;
+  margin: 0.5em;
+  border: 1px solid black;
+  background: white;
+  border-radius: 12px;
+  font-weight: 400;
+  opacity: 0;
+  height: 0;
+  overflow: clip;
+  transition: height 0.5s ease-out, opacity 0.5s ease-out, overlay 0.5s,
+    display 0.5s;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr) auto;
+  transition-behavior: allow-discrete;
+
+  position-area: block-start span-inline-start;
+}
+
 select {
   display: flex;
   justify-content: space-between;
@@ -58,25 +79,6 @@ select {
     justify-content: center;
     &::picker-icon {
       display: none;
-    }
-
-    &::picker(select) {
-      padding: 0;
-      border: 1px solid black;
-      background: white;
-      border-radius: 12px;
-      font-weight: 400;
-      opacity: 0;
-      height: 0;
-      overflow: clip;
-      transition: height 0.5s ease-out, opacity 0.5s ease-out, overlay 0.5s,
-        display 0.5s;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr) auto;
-      transition-behavior: allow-discrete;
-
-      position-area: block-start span-inline-start; /* moves it above and left */
     }
 
     .grid-item.top {
