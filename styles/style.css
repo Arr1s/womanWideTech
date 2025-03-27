@@ -1,6 +1,19 @@
 :root {
   --clipPath: 45%;
 
+  --color-blue: #7ddef5;
+  --color-white: #fff;
+  --color-black: #000;
+  --color-shadow: #75757575;
+  --color-pink: #f3d0fc;
+  --color-yellow: #fcf9d0;
+  --color-purple: #d0dafc;
+}
+
+@property --hue {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 180deg;
   --size-item: clamp(2em, 7vmin, 3.5em);
 
   /* Aantal items per cirkel (dynamisch in JS) */
@@ -11,12 +24,8 @@
   --radius-animation: calc(var(--radius) + var(--size-item));
 
   --animation-time: 60s;
-
-
-  /* colors */
-  --color-white: #fff; 
-  --color-blue: #7ddef5;
 }
+
 
 * {
   margin: 0;
@@ -52,9 +61,9 @@ ul {
   margin-top: 2em;
   transition: 0.1s ease-in-out;
   box-shadow:
-    -5vw 35vh 0 0 #ffffff,
-    65vw 12vh 0 0 #ffffff,
-    85vw 72vh 0 0 #ffffff,
+    -5vw 35vh 0 0 --color-white,
+    65vw 12vh 0 0 --color-white,
+    85vw 72vh 0 0 --color-white,
     -30vw 50vh 0 0 #ffffff,
     95vw 10vh 0 0 #ffffff,
     20vw 60vh 0 0 #ffffff,
