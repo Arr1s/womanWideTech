@@ -1,17 +1,7 @@
-# WomanWideTech
+# WomanWorldWideWeb
 
-## Team 3 
+## Team 4
 
 Lisa Mandemakers<br>
 Laurens Mudde<br>
 Joost Locher<br>
-
-### to-do list
-- [x] Name? 
-- [x] Carousel
-- [x] Cards
-- [x] Codepens
-- [ ] API
-- [ ] Logo
-- [ ] Font / Title
-- [ ] Anchor
