@@ -5,7 +5,7 @@
 .container-codepen {
   width: calc(var(--radius) * 2);
   height: calc(var(--radius) * 2);
-  background-image: url(./images/internetworld.svg);
+  background-image: url(../images/internetworld.svg);
   background-size: 120%;
   background-position: center;
   position: absolute;
